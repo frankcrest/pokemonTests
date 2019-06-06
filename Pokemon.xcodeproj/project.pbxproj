@@ -15,6 +15,8 @@
 		22E86A48203D2AFE00651A02 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E86A47203D2AFE00651A02 /* Pokemon.swift */; };
 		22E86A4A203DE9AD00651A02 /* PokemonAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E86A49203DE9AD00651A02 /* PokemonAPIRequest.swift */; };
 		22E86A4C203DEA3E00651A02 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E86A4B203DEA3E00651A02 /* NetworkManager.swift */; };
+		E94B716122A9B47B001E989E /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B716022A9B47B001E989E /* PokemonDetail.swift */; };
+		E94B716322A9B80E001E989E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94B716222A9B80E001E989E /* DetailViewController.swift */; };
 		E990B91F22A964E300181A20 /* PokemonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990B91E22A964E300181A20 /* PokemonTests.swift */; };
 		E990B92122A9858E00181A20 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E990B92022A9858E00181A20 /* MockNetworkManager.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		22E86A47203D2AFE00651A02 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		22E86A49203DE9AD00651A02 /* PokemonAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPIRequest.swift; sourceTree = "<group>"; };
 		22E86A4B203DEA3E00651A02 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E94B716022A9B47B001E989E /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
+		E94B716222A9B80E001E989E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E990B91D22A964E300181A20 /* PokemonTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokemonTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		E990B91E22A964E300181A20 /* PokemonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTests.swift; sourceTree = "<group>"; };
 		E990B92022A9858E00181A20 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
@@ -88,7 +92,9 @@
 			children = (
 				22E86A27203D28BD00651A02 /* AppDelegate.swift */,
 				22E86A29203D28BD00651A02 /* ViewController.swift */,
+				E94B716222A9B80E001E989E /* DetailViewController.swift */,
 				22E86A47203D2AFE00651A02 /* Pokemon.swift */,
+				E94B716022A9B47B001E989E /* PokemonDetail.swift */,
 				22E86A49203DE9AD00651A02 /* PokemonAPIRequest.swift */,
 				22E86A4B203DEA3E00651A02 /* NetworkManager.swift */,
 				E990B92022A9858E00181A20 /* MockNetworkManager.swift */,
@@ -216,10 +222,12 @@
 			files = (
 				E990B92122A9858E00181A20 /* MockNetworkManager.swift in Sources */,
 				22E86A4A203DE9AD00651A02 /* PokemonAPIRequest.swift in Sources */,
+				E94B716122A9B47B001E989E /* PokemonDetail.swift in Sources */,
 				22E86A2A203D28BD00651A02 /* ViewController.swift in Sources */,
 				22E86A4C203DEA3E00651A02 /* NetworkManager.swift in Sources */,
 				22E86A28203D28BD00651A02 /* AppDelegate.swift in Sources */,
 				22E86A48203D2AFE00651A02 /* Pokemon.swift in Sources */,
+				E94B716322A9B80E001E989E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

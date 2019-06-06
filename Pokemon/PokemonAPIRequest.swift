@@ -51,7 +51,30 @@ extension PokemonAPIRequest {
       completionHandler(result, nil)
     }
   }
+}
+
+//get more data for pokemon
+extension PokemonAPIRequest{
   
+  func getDetail(name: String, completion: @escaping([PokemonDetail]?,Error?)->Void){
+    guard let url = buildURL(endpoint: "pokemon/\(name)") else{
+      completion(nil, PokemonAPIError.badURL)
+      return
+    }
+    self.networker.requestData(with: url) { (data, urlRequest, error) in
+      var json: [String:Any] = [:]
+      var result: [PokemonDetail] = []
+      
+      do{
+        json = try self.jsonObject(fromData: data, response: urlRequest, error: error)
+        result = try self.pokemonDetail(fromJSON:json)
+      }catch let err{
+        completion(nil,err)
+        return
+      }
+      completion(result,nil)
+    }
+  }
 }
 
 /// URL
@@ -97,6 +120,22 @@ extension PokemonAPIRequest {
     }
     
     return pokemons
+  }
+  
+  func pokemonDetail(fromJSON json:[String:Any]) throws -> [PokemonDetail]{
+    guard let results = json["abilities"] as? [[String:String]] else{
+      throw PokemonAPIError.invalidJSON
+    }
+    
+    var pokemonAbilities: [PokemonDetail] = []
+    for result in results{
+      guard let name = result["name"], let url = result["url"] else{
+        throw PokemonAPIError.invalidJSON
+      }
+      let ability = PokemonDetail(name:name, url:url)
+      pokemonAbilities.append(ability)
+    }
+    return pokemonAbilities
   }
   
   func jsonObject(fromData data: Data?, response: URLResponse?, error: Error?) throws -> [String: Any] {
